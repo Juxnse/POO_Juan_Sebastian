@@ -1,10 +1,11 @@
 def nombre():
-  nombre = str(input("Ingrese su nombre: "))
-  return nombre
+  Nombre = str(input("Ingrese su nombre: "))
+  return Nombre
 
 def apellido():
-  apellido = str(input("Ingrese su apellido: "))
-  return apellido
+  Apellido = str(input("Ingrese su apellido: "))
+  return Apellido
 
-nombre()
-apellido()
+nom = nombre()
+ape = apellido()
+print("Su nombre completo es: ", nom, ape)
