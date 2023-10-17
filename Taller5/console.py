@@ -1,6 +1,5 @@
 import sys
 from typing import Optional
-
 from blackjack import Blackjack
 
 
@@ -62,31 +61,7 @@ class UIConsola:
             self.ejecutar_turno_de_la_casa()
 
     def ejecutar_turno_de_la_casa(self):
-    # Destapar la carta oculta de la casa
-        self.blackjack.destapar_mano_de_la_casa()
-        self.mostrar_manos(self.blackjack.cupier.mano, self.blackjack.jugador.mano)
-    
-        while self.blackjack.casa_puede_pedir():
-            self.blackjack.repartir_carta_a_la_casa()
-            self.mostrar_manos(self.blackjack.cupier.mano, self.blackjack.jugador.mano)
-    
-        if self.blackjack.casa_gano():
-            print("\nLA CASA GANA")
-        elif self.blackjack.hay_empate():
-            print("\nEMPATE")
-        else:
-            print("\nGANASTE EL JUEGO")
-    
-        # Reiniciar la apuesta actual
-        self.blackjack.apuesta_actual = 0
-    
-        # Preguntar al jugador si desea jugar otra ronda
-        respuesta = input("¿Desea jugar otra ronda? s(si), n(no): ")
-        if respuesta == "s":
-            self.iniciar_nuevo_juego()
-        else:
-            self.salir()
-
+        pass
 
     def pedir_apuesta(self):
         apuesta: int = int(input("¿Cuál es su apuesta?: "))
